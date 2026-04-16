@@ -39,3 +39,5 @@ next-env.d.ts
 # Public copied files
 public/index.css
 EOF
+
+app/index.css
