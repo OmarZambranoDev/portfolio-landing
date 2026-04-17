@@ -13,7 +13,7 @@
     "copy:ui": "copyfiles -f node_modules/@portfolio/ui/dist/index.css app/"
   },
   "dependencies": {
-    "@portfolio/ui": "^0.0.8",
+    "@portfolio/ui": "^0.0.9",
     "next": "^14.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
