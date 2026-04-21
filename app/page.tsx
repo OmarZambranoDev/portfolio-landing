@@ -1,6 +1,14 @@
 'use client';
 
 import { Button, Card, CardContent, CardDescription, CardFooter, Chip } from '@portfolio/ui';
+import {
+  Music,
+  ShoppingBag,
+  TrendingUp,
+  Users,
+  Plane,
+  Newspaper
+} from 'lucide-react';
 
 export default function Home() {
   const projects = [
@@ -8,37 +16,43 @@ export default function Home() {
       title: 'Music Player',
       description: 'Spotify-inspired audio streaming demo with playlists and media controls.',
       tech: ['React', 'Vite', 'Module Federation'],
-      icon: '🎵',
+      icon: Music,
+      repoUrl: 'https://github.com/your-username/music-player',
     },
     {
       title: 'Shop',
       description: 'E-commerce product grid with filtering, cart, and checkout flow.',
       tech: ['Next.js', 'Tailwind', 'Module Federation'],
-      icon: '🛍️',
+      icon: ShoppingBag,
+      repoUrl: 'https://github.com/your-username/shop',
     },
     {
       title: 'Trade',
       description: 'Real-time stock ticker with WebSocket simulation and interactive charts.',
       tech: ['React', 'Vite', 'WebSockets', 'Recharts'],
-      icon: '📈',
+      icon: TrendingUp,
+      repoUrl: 'https://github.com/your-username/trade',
     },
     {
       title: 'Social',
       description: 'Social media feed with infinite scroll, comments, and likes.',
       tech: ['React', 'Vite', 'Module Federation'],
-      icon: '💬',
+      icon: Users,
+      repoUrl: 'https://github.com/your-username/social',
     },
     {
       title: 'Travel',
       description: 'Booking flow with multi-step forms and date range picker.',
       tech: ['Next.js', 'React Hook Form', 'Module Federation'],
-      icon: '✈️',
+      icon: Plane,
+      repoUrl: 'https://github.com/your-username/travel',
     },
     {
       title: 'News',
       description: 'Content-heavy blog layout with markdown rendering and RSS feed.',
       tech: ['Next.js', 'MDX', 'Module Federation'],
-      icon: '📰',
+      icon: Newspaper,
+      repoUrl: 'https://github.com/your-username/news',
     },
   ];
 
@@ -102,7 +116,11 @@ export default function Home() {
               className="bg-white border border-earth-stone/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-earth-sage/50"
             >
               <div className="h-40 bg-gradient-to-br from-earth-forest to-earth-sage flex items-center justify-center">
-                <span className="text-5xl">{project.icon}</span>
+                <project.icon
+                  size={48}
+                  className="text-earth-stone"
+                  aria-hidden="true"
+                />
               </div>
               <CardContent>
                 <h3 className="text-xl font-bold text-earth-forest mb-1">{project.title}</h3>
@@ -124,7 +142,7 @@ export default function Home() {
                     variant="outline"
                     size="sm"
                     className="flex-1 border-earth-sage text-earth-forest hover:bg-earth-stone/20"
-                    onClick={() => window.open('https://github.com/your-username/music-player', '_blank')}
+                    onClick={() => window.open(project.repoUrl, '_blank')}
                   >
                     GitHub
                   </Button>
