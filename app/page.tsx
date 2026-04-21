@@ -143,6 +143,7 @@ export default function Home() {
                     size="sm"
                     className="flex-1 border-earth-sage text-earth-forest hover:bg-earth-stone/20"
                     onClick={() => window.open(project.repoUrl, '_blank')}
+                    aria-label={`View ${project.title} source code on GitHub`}
                   >
                     GitHub
                   </Button>
@@ -151,6 +152,7 @@ export default function Home() {
                     size="sm"
                     className="flex-1 bg-earth-forest hover:bg-earth-moss border-earth-forest text-white"
                     onClick={() => alert('Demo coming soon')}
+                    aria-label={`Open ${project.title} demo`}
                   >
                     Open App
                   </Button>
@@ -175,6 +177,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-earth-forest hover:text-earth-sage transition-colors underline underline-offset-4"
+                aria-label="UI Library source code on GitHub"
               >
                 UI Library
               </a>
@@ -183,6 +186,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-earth-forest hover:text-earth-sage transition-colors underline underline-offset-4"
+                aria-label="Landing page source code on GitHub"
               >
                 Landing Source
               </a>
