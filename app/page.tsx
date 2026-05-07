@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Card, CardContent, CardDescription, CardFooter, Chip } from '@portfolio/ui';
+import { Button, Card, CardContent, CardDescription, CardFooter, Chip } from '@OmarZambranoDev/portfolio-ui';
 import {
   Music,
   ShoppingBag,
@@ -14,46 +14,47 @@ export default function Home() {
   const projects = [
     {
       title: 'Music Player',
-      description: 'Spotify-inspired audio streaming demo with playlists and media controls.',
-      tech: ['React', 'Vite', 'Module Federation'],
+      description: 'Music library and player with 200 tracks, playlist management, mock audio playback, mobile-responsive design, and persistent state. Built with React, TypeScript, and Module Federation. Includes unit tests, E2E testing, and Lighthouse CI.',
+      tech: ['React', 'TypeScript', 'Vite', 'Module Federation', 'Tailwind CSS', 'Zustand', 'Playwright', 'Vitest', 'GitHub Actions'],
       icon: Music,
-      repoUrl: 'https://github.com/your-username/music-player',
+      repoUrl: 'https://github.com/OmarZambranoDev/portfolio-music',
+      demoUrl: 'https://portfolio-music-eta.vercel.app/'
     },
-    {
-      title: 'Shop',
-      description: 'E-commerce product grid with filtering, cart, and checkout flow.',
-      tech: ['Next.js', 'Tailwind', 'Module Federation'],
-      icon: ShoppingBag,
-      repoUrl: 'https://github.com/your-username/shop',
-    },
-    {
-      title: 'Trade',
-      description: 'Real-time stock ticker with WebSocket simulation and interactive charts.',
-      tech: ['React', 'Vite', 'WebSockets', 'Recharts'],
-      icon: TrendingUp,
-      repoUrl: 'https://github.com/your-username/trade',
-    },
-    {
-      title: 'Social',
-      description: 'Social media feed with infinite scroll, comments, and likes.',
-      tech: ['React', 'Vite', 'Module Federation'],
-      icon: Users,
-      repoUrl: 'https://github.com/your-username/social',
-    },
-    {
-      title: 'Travel',
-      description: 'Booking flow with multi-step forms and date range picker.',
-      tech: ['Next.js', 'React Hook Form', 'Module Federation'],
-      icon: Plane,
-      repoUrl: 'https://github.com/your-username/travel',
-    },
-    {
-      title: 'News',
-      description: 'Content-heavy blog layout with markdown rendering and RSS feed.',
-      tech: ['Next.js', 'MDX', 'Module Federation'],
-      icon: Newspaper,
-      repoUrl: 'https://github.com/your-username/news',
-    },
+    // {
+    //   title: 'Shop',
+    //   description: 'E-commerce product grid with filtering, cart, and checkout flow.',
+    //   tech: ['Next.js', 'Tailwind', 'Module Federation'],
+    //   icon: ShoppingBag,
+    //   repoUrl: 'https://github.com/your-username/shop',
+    // },
+    // {
+    //   title: 'Trade',
+    //   description: 'Real-time stock ticker with WebSocket simulation and interactive charts.',
+    //   tech: ['React', 'Vite', 'WebSockets', 'Recharts'],
+    //   icon: TrendingUp,
+    //   repoUrl: 'https://github.com/your-username/trade',
+    // },
+    // {
+    //   title: 'Social',
+    //   description: 'Social media feed with infinite scroll, comments, and likes.',
+    //   tech: ['React', 'Vite', 'Module Federation'],
+    //   icon: Users,
+    //   repoUrl: 'https://github.com/your-username/social',
+    // },
+    // {
+    //   title: 'Travel',
+    //   description: 'Booking flow with multi-step forms and date range picker.',
+    //   tech: ['Next.js', 'React Hook Form', 'Module Federation'],
+    //   icon: Plane,
+    //   repoUrl: 'https://github.com/your-username/travel',
+    // },
+    // {
+    //   title: 'News',
+    //   description: 'Content-heavy blog layout with markdown rendering and RSS feed.',
+    //   tech: ['Next.js', 'MDX', 'Module Federation'],
+    //   icon: Newspaper,
+    //   repoUrl: 'https://github.com/your-username/news',
+    // },
   ];
 
   const skills = [
@@ -151,7 +152,7 @@ export default function Home() {
                     variant="primary"
                     size="sm"
                     className="flex-1 bg-earth-forest hover:bg-earth-moss border-earth-forest text-white"
-                    onClick={() => alert('Demo coming soon')}
+                    onClick={() => window.open(project.demoUrl, '_blank')}
                     aria-label={`Open ${project.title} demo`}
                   >
                     Open App
@@ -173,7 +174,7 @@ export default function Home() {
             <span className="hidden md:block text-earth-stone">•</span>
             <div className="flex gap-4">
               <a
-                href="https://github.com/your-username/portfolio-ui"
+                href="https://github.com/OmarZambranoDev/portfolio-ui"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-earth-forest hover:text-earth-sage transition-colors underline underline-offset-4"
@@ -182,7 +183,7 @@ export default function Home() {
                 UI Library
               </a>
               <a
-                href="https://github.com/your-username/portfolio-landing"
+                href="https://github.com/OmarZambranoDev/portfolio-landing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-earth-forest hover:text-earth-sage transition-colors underline underline-offset-4"
@@ -194,7 +195,6 @@ export default function Home() {
           </div>
           <p className="text-earth-sage/60 text-xs text-center mt-4">
             All components are custom-built using TypeScript, Tailwind, and class-variance-authority.
-            Designed and developed in collaboration with DeepSeek AI.
           </p>
         </div>
       </footer>

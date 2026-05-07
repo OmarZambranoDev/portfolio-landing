@@ -6,7 +6,7 @@ Next.js host application for my micro-frontend portfolio. This app serves as the
 - React 18.2.0
 - TypeScript 5.2.2
 - Tailwind CSS 3.4.17
-- @portfolio/ui (shared component library)
+- @OmarZambranoDev/portfolio-ui (shared component library via GitHub Packages)
 
 # Getting Started
 
@@ -14,7 +14,7 @@ Next.js host application for my micro-frontend portfolio. This app serves as the
 - Node.js 20.19.5
 - npm 10.8.2
 - Verdaccio running locally (for @portfolio/ui)
-- @portfolio/ui published to Verdaccio
+- GitHub Packages access (for @OmarZambranoDev/portfolio-ui)
 
 ## Installation
 npm install  
